@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailBook</title>
+    <link rel="stylesheet" href= "main.css">
+    <!--  Font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    <!-- Form modal -->
+    <div id="fullscreen-div"></div>
+    <form class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3 id="modal-title">Add Address</h3>
+                <button type="button" id="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+                <div class="modal-main">
+                    <div class="modal-row">
+                        <div class="modal-col">
+                            <label for="">How should your mail be addressed?</label>
+                            <input type="text" name="addr_ing_name" placeholder="E.g. The Smith Family" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-row grid-row">
+                        <div class="modal-col">
+                            <label for="">First Name</label>
+                            <input type="text" name="first_name" placeholder="The first name" class="form-control">
+                        </div>
+                        <div class="modal-col">
+                            <label for="">Last Name</label>
+                            <input type="text" name="last_name" placeholder="The last name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-row grid-row">
+                        <div class="modal-col">
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="The email" class="form-control">
+                        </div>
+                        <div class="modal-col">
+                            <label for="">Phone</label>
+                            <input type="text" name="phone" placeholder="The phone" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-row grid-row">
+                        <div class="modal-col">
+                            <label for="">Street Address</label>
+                            <input type="text" name="street_addr" placeholder="Street address, apartment, house number, etc." class="form-control">
+                        </div>
+                        <div class="modal-col">
+                            <label for="">Postal Code</label>
+                            <input type="text" name="postal_code" placeholder="70323" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-row grid-row">
+                        <div class="modal-col">
+                            <label for="">City</label>
+                            <input type="text" name="city" placeholder="City name" class="form-control">
+                        </div>
+                        <div class="modal-col">
+                            <label for="">Country</label>
+                            <select name="country" id="country-list">
+                                <option>USA</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="modal-row">
+                        <div class="modal-col">
+                            <label for="">Labels</label>
+                            <select name="labels">
+                                <option value="Family">Family</option>
+                                <option value="Friends">Friends</option>
+                                <option value="Colleagues">Colleagues</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-row" id="modal-btns">
+                        <button type="submit" id="save-btn">Save</button>
+                    </div>
+                </div>
+        </div>
+    </form>
+    <!-- End of form modal -->
+
+    <!-- Address book home -->
+    <div class="addr-book" id="addr-book">
+        <div class="addr-book-content">
+            <div class="addr-book-head">
+                <i class="fa-solid fa-address-book fa-2x"></i>
+                <h2>Address<span>Book</span></h2>
+            </div>
+            <div class="addr-book-top">
+                <button type="button" class="btn" id="add-btn">
+                    <span><i class="fas fa-plus"></i> add address</span>
+                </button>
+            </div>
+            <div class="addr-book-list" id="addr-book-list">
+                <table class="addr-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Address</th>
+                            <th>Labels</th>
+                            <th>By Name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <span class="addressing-name">Smith Family</span><br>
+                                <span class="address">Johnson Street - 5668, Lake side</span>
+                            </td>
+                            <td><span>Colleagues</span></td>
+                            <td>Mark Smith</td>
+                            <td>123-456-7890</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- End of Address book home -->
+    
+    <script src="app.js"></script>
+</body>
+</html>
